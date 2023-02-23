@@ -9,11 +9,12 @@ on:
         default: ""
 
 env:
-  IMAGE: docker.pkg.github.com/${{ github.repository }}/sporretime:${{ github.event.inputs.gitCommit }}
+  IMAGE: ghcr.io/${{ github.repository }}/sporretime:${{ github.event.inputs.gitCommit }}
 
 jobs:
   deploy-dev:
     name: Deploy to NAIS Dev-gcp
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
