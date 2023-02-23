@@ -43,8 +43,6 @@ spec:
       claims:
         extra:
           - "NAVident"
-  envFrom:
-    - secret: sporretime-session-key
   ingresses:
     - "https://sporretime.dev.intern.nav.no"
   accessPolicy:
