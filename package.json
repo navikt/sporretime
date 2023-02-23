@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8080",
     "lint": "next lint"
   },
   "dependencies": {
-    "@navikt/ds-css": "^2.4.0",
-    "@navikt/ds-react": "^2.4.0",
+    "@navikt/ds-css": "2.4.0",
+    "@navikt/ds-react": "2.4.0",
     "@next/font": "13.1.6",
     "@types/node": "18.14.1",
     "@types/react": "18.0.28",
