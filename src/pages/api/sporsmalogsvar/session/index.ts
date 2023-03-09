@@ -21,7 +21,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  const url = "sporsmalogsvar.dev.intern.nav.no/api/v1/session"
+  const url = "https://sporsmalogsvar.dev.intern.nav.no/api/v1/session"
   post(url, req.body).then((response) => res.status(200))
 }
 
