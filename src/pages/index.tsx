@@ -40,7 +40,10 @@ export default function Home() {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-    });
+    })
+      .catch((error) => {
+        console.log("Got error! :(");
+      })
   }
 
   return (
