@@ -42,8 +42,8 @@ export default function Home() {
       },
     })
       .catch((error) => {
-        console.log("Got error! :(");
-      })
+        console.log("Got error! :(", error);
+      });
   }
 
   return (
