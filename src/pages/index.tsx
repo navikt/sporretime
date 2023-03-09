@@ -7,6 +7,7 @@ const texts = {
   header: "Spørretime",
   inputLabel: "ID",
   buttonText: "Klikk her!",
+  getButtonText: "Klikk her for get!",
 }
 
 interface SessionDTO {
@@ -29,9 +30,18 @@ export default function Home() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(body),
-      })
+      });
     }
   };
+
+  const handleGetClick = () => {
+    fetch("/api/sporsmalogsvar/session", {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    });
+  }
 
   return (
     <>
@@ -48,6 +58,11 @@ export default function Home() {
             <TextField label={texts.inputLabel} onChange={(event) => setId(event.target.value)}/>
             <Button onClick={submit}>
               {texts.buttonText}
+            </Button>
+          </div>
+          <div>
+            <Button onClick={handleGetClick}>
+              {texts.getButtonText}
             </Button>
           </div>
         </div>
