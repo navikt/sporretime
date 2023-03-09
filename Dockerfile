@@ -1,6 +1,4 @@
-FROM node:16-alpine
-
-ENV NODE_ENV production
+FROM gcr.io/distroless/nodejs:18
 
 COPY /next.config.js ./
 COPY /.next ./.next
@@ -8,6 +6,6 @@ COPY /public ./public
 COPY /node_modules ./node_modules
 COPY /package.json ./package.json
 
-CMD ["npm", "start"]
+EXPOSE 3000
 
-EXPOSE 8080
+CMD ["node_modules/next/dist/bin/next", "start"]
