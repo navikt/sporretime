@@ -21,7 +21,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  console.log("GET! ", req);
+  console.log("Trying to get sporsmal");
   const url = "sporsmalogsvar.dev.intern.nav.no/api/v1/sporsmal"
   get(url).then((response) => res.status(200))
 }

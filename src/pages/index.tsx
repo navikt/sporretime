@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   const handleGetClick = () => {
-    fetch("/api/sporsmalogsvar/session", {
+    fetch("/api/sporsmalogsvar/sporsmal", {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
